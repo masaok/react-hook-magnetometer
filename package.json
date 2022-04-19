@@ -1,13 +1,13 @@
 {
-  "name": "react-hook-accelerometer",
+  "name": "react-hook-magnetometer",
   "version": "1.1.1",
-  "description": "React hook for Accelerometer sensor access",
+  "description": "React hook for magnetometer sensor access",
   "keywords": [
     "react",
     "hook",
-    "accelerometer"
+    "magnetometer"
   ],
-  "repository": "git@github.com:masaok/react-hook-accelerometer.git",
+  "repository": "git@github.com:masaok/react-hook-magnetometer.git",
   "main": "dist/index.js",
   "license": "LGPL",
   "author": "Masao Kitamura",

@@ -1,61 +1,59 @@
-# react-hook-accelerometer
-
-A React hook to access data from the [Accelerometer API](https://developer.mozilla.org/en-US/docs/Web/API/Accelerometer).
+A React hook to access data from the [Magnetometer API](https://developer.mozilla.org/en-US/docs/Web/API/Magnetometer).
 
 ## Installation
 
 Using `npm`:
 
 ```sh
-npm install --save react-hook-accelerometer
+npm install --save react-hook-magnetometer
 ```
 
 Using `yarn`:
 
 ```sh
-yarn add react-hook-accelerometer
+yarn add react-hook-magnetometer
 ```
 
 ## Usage
 
 ```jsx
 import React from 'react'
-import useAccelerometer from 'react-hook-accelerometer'
+import useMagnetometer from 'react-hook-magnetometer'
 
-const ComponentWithAccelerometer = () => {
-  const accelerometer = useAccelerometer()
+const MyComponent = () => {
+  const magnetometer = useMagnetometer()
 
-  return !accelerometer.error ? (
+  return !magnetometer.error ? (
     <ul>
-      <li>X: {accelerometer.x}</li>
-      <li>Y: {accelerometer.y}</li>
-      <li>Z: {accelerometer.z}</li>
+      <li>X: {magnetometer.x}</li>
+      <li>Y: {magnetometer.y}</li>
+      <li>Z: {magnetometer.z}</li>
     </ul>
   ) : (
-    <p>No accelerometer, sorry.</p>
+    <p>No magnetometer, sorry.</p>
   )
 }
 ```
 
 ### Using `SensorOptions`
 
-If you want to use this feature, simply provide `useAccelerometer` with a `SensorOptions` object:
+If you want to use this feature, simply provide `useMagnetometer` with a `SensorOptions` object:
 
 ```jsx
-const accelerometer = useAccelerometer({
+const magnetometer = useMagnetometer({
   frequency: 60, // cycles per second
 })
 ```
 
 ## Notes
 
-Access to data from the Accelerometer API needs user permission.
+Access to data from the Magnetometer API needs user permission.
 
-If permission to access accelerometer was previously granted by the user, accelerometer data will be available. If permission to access was not granted previously, the user will be prompted to give permission when the component mounts.
+If permission to access magnetometer was previously granted by the user, magnetometer data will be available. If permission to access was not granted previously, the user will be prompted to give permission when the component mounts.
 
 ## Caveats
 
-Accelerometer API is available only in secure contexts (only using HTTPS).
+Magnetometer API is available only in secure contexts (only using HTTPS).
 
 ## Credits
 
